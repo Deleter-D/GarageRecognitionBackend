@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    username: root
+    password: wyp2000722
+    url: jdbc:mysql://127.0.0.1:3306/garbage_recognition
+    driver-class-name: com.mysql.cj.jdbc.Driver
