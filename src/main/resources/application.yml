@@ -4,3 +4,8 @@ spring:
     password: wyp2000722
     url: jdbc:mysql://127.0.0.1:3306/garbage_recognition
     driver-class-name: com.mysql.cj.jdbc.Driver
+  mvc:
+    pathmatch:
+      # springfox路径匹配基于ant_path_matcher
+      # springboot 2.6以后路径匹配基于path_pattern_matcher
+      matching-strategy: ant_path_matcher
