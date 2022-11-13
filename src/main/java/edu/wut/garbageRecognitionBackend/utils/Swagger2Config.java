@@ -19,7 +19,7 @@ public class Swagger2Config {
     public Docket coreApiConfig() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(backendApiInfo())
-                .groupName("user")
+                .groupName("backend")
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("edu.wut.garbageRecognitionBackend.controller"))
                 .build();
@@ -30,7 +30,7 @@ public class Swagger2Config {
                 .title("垃圾识别小程序——API文档")
                 .description("垃圾识别小程序后端RESTFul API文档")
                 .version("1.0")
-                .contact(new Contact("GoldPancake", "", "867909454@qq.com"))
+                .contact(new Contact("GoldPancake", "https://deleter-d.github.io/", "867909454@qq.com"))
                 .build();
     }
 }
