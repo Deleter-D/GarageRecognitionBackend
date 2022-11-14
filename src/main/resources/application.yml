@@ -2,10 +2,17 @@ spring:
   datasource:
     username: root
     password: wyp2000722
-    url: jdbc:mysql://127.0.0.1:3306/garbage_recognition
+    url: jdbc:mysql://127.0.0.1:3306/garbage_recognition?serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
   mvc:
     pathmatch:
       # springfox路径匹配基于ant_path_matcher
       # springboot 2.6以后路径匹配基于path_pattern_matcher
       matching-strategy: ant_path_matcher
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+
+microApp:
+  appid: "wxed3b7a73c7c9c8e6"
+  secret: "5293837674dd6c2318dd7cd0f453e60d"

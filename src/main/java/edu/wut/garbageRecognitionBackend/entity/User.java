@@ -64,4 +64,12 @@ public class User {
     public void setOpenid(String openid) {
         this.openid = openid == null ? null : openid.trim();
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", openid='" + openid + '\'' +
+                '}';
+    }
 }

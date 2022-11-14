@@ -128,4 +128,14 @@ public class History {
     public void setResult(String result) {
         this.result = result == null ? null : result.trim();
     }
+
+    @Override
+    public String toString() {
+        return "History{" +
+                "id=" + id +
+                ", openid='" + openid + '\'' +
+                ", imageUrl='" + imageUrl + '\'' +
+                ", result='" + result + '\'' +
+                '}';
+    }
 }
