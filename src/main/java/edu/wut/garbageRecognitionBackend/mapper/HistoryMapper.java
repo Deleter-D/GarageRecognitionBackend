@@ -3,6 +3,8 @@ package edu.wut.garbageRecognitionBackend.mapper;
 import edu.wut.garbageRecognitionBackend.entity.History;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 @Mapper
 public interface HistoryMapper {
     /**
@@ -52,4 +54,6 @@ public interface HistoryMapper {
      * @mbggenerated
      */
     int updateByPrimaryKey(History record);
+
+    List<History> selectByOpenid(String openid);
 }
