@@ -37,10 +37,9 @@ public class UserController {
     public ResponseUtil<String> bindUser(String code) {
 
         // 获取配置文件中的信息，拼接请求url
-        String appid = environment.getProperty("microApp.appid");
-        String secret = environment.getProperty("microApp.secret");
-        String js_code = code;
-        String url = "https://api.weixin.qq.com/sns/jscode2session?appid=" + appid + "&secret=" + secret + "&js_code=" + js_code + "&grant_type=authorization_code";
+        String appid = environment.getProperty("miniApp.appid");
+        String secret = environment.getProperty("miniApp.secret");
+        String url = "https://api.weixin.qq.com/sns/jscode2session?appid=" + appid + "&secret=" + secret + "&js_code=" + code + "&grant_type=authorization_code";
 
         // 发送请求，结果注入一个String中
         RestTemplate restTemplate = new RestTemplate();
