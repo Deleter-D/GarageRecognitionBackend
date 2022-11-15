@@ -27,5 +27,5 @@ mybatis:
   mapper-locations: classpath:mapper/*.xml
 
 miniApp:
-  appid: "wxed3b7a73c7c9c8e6"
-  secret: "5293837674dd6c2318dd7cd0f453e60d"
+  appid: ""
+  secret: ""
