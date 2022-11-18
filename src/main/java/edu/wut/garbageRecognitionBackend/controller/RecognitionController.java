@@ -21,7 +21,7 @@ public class RecognitionController {
     public ResponseUtil<String> recognition(String imageURL) {
         String url = imageURL.substring(imageURL.lastIndexOf("/") + 1);
         String result = socketClientUtil.sendImageURLToPython(url);
-        if (result != null) {
+        if (result != null && !result.equals("")) {
             responseUtil.setCode(0);
             responseUtil.setObject(result);
         } else {

@@ -29,7 +29,11 @@ while True:
         if imageName.strip().endswith('over'):
             imageName = imageName[:-4]
             break
-    print(imageName)
+    print('imageName<' + imageName + '>')
+
+    if imageName is '':
+        clientSocket.close()
+        continue
 
     result = predict_image.predict_image(imageName)
     clientSocket.send(bytes('%s' % str(result), 'utf-8'))
